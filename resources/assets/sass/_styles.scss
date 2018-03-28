@@ -1,0 +1,28 @@
+
+html{
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: whitesmoke;
+}
+//sidebar
+aside{
+  // width: 200px;
+  background-color: white;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.menu-list li{
+  border-bottom: 1px solid whitesmoke;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+//end sidebar
+//help-blcok
+.help-block{
+  font-size: 0.6em;
+  color: $yico-red;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+//end help-block
