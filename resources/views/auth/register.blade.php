@@ -20,7 +20,7 @@
                             <div class="field">
                               <div class="field">
                                 <p class="control">
-                                  <input id="firstName" type="text" class="input" name="firstName" value="{{ old('firstName') }}" required autofocus>
+                                  <input id="firstName" type="text" class="input" name="firstName" value="{{ old('firstName') }}" placeholder="請輸入您的姓氏" required autofocus>
                                 </p>
                               </div>
                               @if ($errors->has('firstName'))
@@ -39,7 +39,7 @@
                             <div class="field">
                               <div class="field">
                                 <p class="control">
-                                  <input id="lastName" type="text" class="input" name="lastName" value="{{ old('lastName') }}" required autofocus>
+                                  <input id="lastName" type="text" class="input" name="lastName" value="{{ old('lastName') }}" placeholder="請輸入您的大名" required autofocus>
                                 </p>
                               </div>
                               @if ($errors->has('lastName'))
@@ -58,11 +58,68 @@
                             <div class="field">
                               <div class="field">
                                 <p class="control">
-                                  <input id="name" type="text" class="input" name="name" value="{{ old('name') }}" required autofocus>
+                                  <input id="name" type="text" class="input" name="name" value="{{ old('name') }}" placeholder="請輸入您的使用者名稱（限英文）" required autofocus>
                                 </p>
                               </div>
                               @if ($errors->has('name'))
                               <p class="help">{{ $errors->first('name') }}</p>
+                              @endif
+                            </div>
+                          </div>
+                        </div>
+                        <!---->
+                        <!---->
+                        <div class="field is-horizontal">
+                          <div class="field-label">
+                            <label class="label">隸屬公司</label>
+                          </div>
+                          <div class="field-body">
+                            <div class="field">
+                              <div class="field">
+                                <p class="control">
+                                  <input id="companyName" type="text" class="input" name="companyName" value="{{ old('companyName') }}" placeholder="公司名稱 EX:益州化學工業" required autofocus>
+                                </p>
+                              </div>
+                              @if ($errors->has('companyName'))
+                              <p class="help">{{ $errors->first('companyName') }}</p>
+                              @endif
+                            </div>
+                          </div>
+                        </div>
+                        <!---->
+                        <!---->
+                        <div class="field is-horizontal">
+                          <div class="field-label">
+                            <label class="label">部門</label>
+                          </div>
+                          <div class="field-body">
+                            <div class="field">
+                              <div class="field">
+                                <p class="control">
+                                  <input id="department" type="text" class="input" name="department" value="{{ old('department') }}" placeholder="部門別" required autofocus>
+                                </p>
+                              </div>
+                              @if ($errors->has('department'))
+                              <p class="help">{{ $errors->first('department') }}</p>
+                              @endif
+                            </div>
+                          </div>
+                        </div>
+                        <!---->
+                        <!---->
+                        <div class="field is-horizontal">
+                          <div class="field-label">
+                            <label class="label">職稱</label>
+                          </div>
+                          <div class="field-body">
+                            <div class="field">
+                              <div class="field">
+                                <p class="control">
+                                  <input id="jobTitle" type="text" class="input" name="jobTitle" value="{{ old('jobTitle') }}" placeholder="職稱" required autofocus>
+                                </p>
+                              </div>
+                              @if ($errors->has('jobTitle'))
+                              <p class="help">{{ $errors->first('jobTitle') }}</p>
                               @endif
                             </div>
                           </div>
@@ -77,7 +134,7 @@
                             <div class="field">
                               <div class="field">
                                 <p class="control">
-                                  <input id="email" type="email" class="input" name="email" value="{{ old('email') }}" required>
+                                  <input id="email" type="email" class="input" name="email" value="{{ old('email') }}" placeholder="@yico.com.tw" required>
                                 </p>
                               </div>
                               @if ($errors->has('email'))
@@ -96,7 +153,7 @@
                             <div class="field">
                               <div class="field">
                                 <p class="control">
-                                  <input id="password" type="password" class="input" name="password" required>
+                                  <input id="password" type="password" class="input" name="password" placeholder="建議至少包含英文及數字" required>
                                 </p>
                               </div>
                               @if ($errors->has('password'))
@@ -115,7 +172,7 @@
                             <div class="field">
                               <div class="field">
                                 <p class="control">
-                                  <input id="password-confirm" type="password" class="input" name="password-confirm" required>
+                                  <input id="password-confirm" type="password" class="input" name="password-confirm" placeholder="請再輸入一次您的密碼" required>
                                 </p>
                               </div>
                             </div>

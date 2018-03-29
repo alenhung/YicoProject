@@ -50,10 +50,13 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'firstName' => 'required|string|max:255',
             'lastName' => 'required|string|max:255',
+            'companyName' => 'required|string|max:255',
+            'department' => 'required|string|max:255',
+            'jobTitle' => 'required|string|max:255',
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-        ]);
+        ],['email.required' => 'We need to know your e-mail address!',]);
     }
 
     /**
@@ -68,6 +71,9 @@ class RegisterController extends Controller
             'firstName' => $data['firstName'],
             'lastName' => $data['lastName'],
             'name' => $data['name'],
+            'companyName' => $data['companyName'],
+            'department' => $data['department'],
+            'jobTitle' => $data['jobTitle'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
