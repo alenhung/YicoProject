@@ -56,7 +56,8 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-        ],['email.required' => 'We need to know your e-mail address!',]);
+        ]);
+
     }
 
     /**
@@ -67,6 +68,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      $this->validate($request, [
+          'title' => 'required|unique:posts|max:255',
+          'body' => 'required',
+          'publish_at' => 'nullable|date',
+      ]);
         return User::create([
             'firstName' => $data['firstName'],
             'lastName' => $data['lastName'],

@@ -1,14 +1,12 @@
 @extends('layouts.site')
-
 @section('content')
 <div class="container">
     <div class="columns is-centered">
-        <div class="column is-two-thirds m-t-80">
+        <div class="column is-two-thirds m-t-20">
             <div class="card">
                 <div class="card-content">
-
-                    <h1 class="is-1">註冊使用者</h1>
-
+                    <h1 class="title">註冊使用者</h1>
+                    <hr>
                     <form class="form-horizontal m-r-15 m-l-15" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
                         <!---->
@@ -193,7 +191,6 @@
                             </div>
                           </div>
                         </div>
-
                     </form>
                 </div>
             </div>
