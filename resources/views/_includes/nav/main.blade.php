@@ -21,7 +21,8 @@
               </span>
               申請紀錄
             </a>
-            <a href="{{route('document.create')}}
+            {{-- <a href="{{route('document.create')}} --}}
+            <a href="#
             " class="navbar-item">
               <span class="icon">
                 <i class="fa fa-plus m-r-10"></i>
