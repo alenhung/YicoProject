@@ -1,23 +1,18 @@
 @extends('layouts.app')
-
+@section('sidebar')
+  @include('_includes.nav.home-side')
+@endsection
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+  <div class="columns">
+    <div class="column">
+      @if (session('status'))
+          <div class="alert alert-success">
+              {{ session('status') }}
+          </div>
+      @endif
+      <h1>Welcome to Yico System</h1>
     </div>
+  </div>
 </div>
 @endsection
