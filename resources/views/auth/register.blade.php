@@ -170,7 +170,7 @@
                             <div class="field">
                               <div class="field">
                                 <p class="control">
-                                  <input id="password-confirm" type="password" class="input" name="password-confirm" placeholder="請再輸入一次您的密碼" required>
+                                  <input id="password-confirm" type="password" class="input" name="password_confirmation" placeholder="請再輸入一次您的密碼" required>
                                 </p>
                               </div>
                             </div>
