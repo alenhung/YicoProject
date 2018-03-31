@@ -68,11 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-      $this->validate($request, [
-          'title' => 'required|unique:posts|max:255',
-          'body' => 'required',
-          'publish_at' => 'nullable|date',
-      ]);
+
         return User::create([
             'firstName' => $data['firstName'],
             'lastName' => $data['lastName'],
