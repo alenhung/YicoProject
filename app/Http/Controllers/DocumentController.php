@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\DocumentPost;
+use App\Document;
 
 class DocumentController extends Controller
 {
@@ -22,6 +23,7 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
@@ -34,9 +36,11 @@ class DocumentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DocumentPost $request)
     {
-        //
+        $document = new Document();
+        return $request->all();
+
     }
 
     /**
