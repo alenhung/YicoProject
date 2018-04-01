@@ -14,6 +14,7 @@ class DocumentController extends Controller
     public function index()
     {
         //
+        return view('document/index');
     }
 
     /**
@@ -24,6 +25,7 @@ class DocumentController extends Controller
     public function create()
     {
         //
+        return view('document/create');
     }
 
     /**
