@@ -123,6 +123,10 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+var app = new Vue({
+  el: '#app'
+
+});
 
 /***/ }),
 /* 3 */
