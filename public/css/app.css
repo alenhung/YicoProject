@@ -17951,3 +17951,8 @@ aside {
   padding-bottom: 0.5em;
 }
 
+.table-is-center td,
+.table-is-center th {
+  text-align: center;
+}
+
