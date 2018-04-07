@@ -15,7 +15,7 @@ class AddTelToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->string('tel')->after('jobTitle')->comment('分機號碼');
+            $table->string('extTel')->after('jobTitle')->comment('分機號碼');
         });
     }
 
@@ -28,7 +28,7 @@ class AddTelToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->dropColumn('tel');
+            $table->dropColumn('extTel');
         });
     }
 }
