@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'companyName' => 'required|string|max:255',
             'department' => 'required|string|max:255',
             'jobTitle' => 'required|string|max:255',
+            'extTel' => 'required|string|max:255',
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',

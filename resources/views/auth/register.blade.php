@@ -126,6 +126,25 @@
                         <!---->
                         <div class="field is-horizontal">
                           <div class="field-label">
+                            <label class="label">分機號碼</label>
+                          </div>
+                          <div class="field-body">
+                            <div class="field">
+                              <div class="field">
+                                <p class="control">
+                                  <input id="extTel" type="number" class="input" name="extTel" value="{{ old('extTel') }}" placeholder="分機號碼 EX:121" required autofocus>
+                                </p>
+                              </div>
+                              @if ($errors->has('extTel'))
+                              <p class="help">{{ $errors->first('extTel') }}</p>
+                              @endif
+                            </div>
+                          </div>
+                        </div>
+                        <!---->
+                        <!---->
+                        <div class="field is-horizontal">
+                          <div class="field-label">
                             <label class="label">公司電子信箱</label>
                           </div>
                           <div class="field-body">
