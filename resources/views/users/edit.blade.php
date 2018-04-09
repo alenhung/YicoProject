@@ -180,7 +180,7 @@
                   <div class="field-body">
                     <div class="field">
                       <div class="control">
-                        <input id="email" type="email" class="input" name="email" value="{{$user->email}}" ><!--Disabled-->
+                        <input id="email" type="email" class="input" name="email" value="{{$user->email}}" Disabled><!--Disabled-->
                       </div>
                       @if ($errors->has('email'))
                       <div class="help-block">{{ $errors->first('email') }}</div>
@@ -191,6 +191,7 @@
                 <!---->
               </div>
             </div>
+            
             <div class="columns">
               <div class="column">
                 <!---->
@@ -225,7 +226,6 @@
                     </div>
                   </div>
                 </div>
-                <!---->
               </div>
             </div>
             <div class="columns">

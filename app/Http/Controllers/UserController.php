@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UsersAdd;
+use App\Http\Requests\UsersUpdate;
 use App\User;
 use App\Role;
 use DB;
@@ -107,7 +108,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UsersAdd $request, $id)
+    public function update(UsersUpdate $request, $id)
     {
         //
         $user = User::findOrFail($id);
