@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\UsersAdd;
 use App\User;
 use App\Role;
 use DB;
@@ -41,9 +41,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UsersAdd $request)
     {
         //
+        return $request->all();
 
     }
 
