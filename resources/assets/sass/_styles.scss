@@ -24,9 +24,16 @@ aside{
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-.table-is-center{
-  td,th{
-    text-align: center;
-  }
+.img-circle {
+    border-radius: 50%;
+}
+.border-whitesmoke{
+  border: 5px solid;
+  border-color: whitesmoke;
+}
+.has-shadow{
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
 }
 //end help-block

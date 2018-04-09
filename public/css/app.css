@@ -5052,8 +5052,8 @@ a.has-text-danger:focus {
 .box {
   background-color: white;
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-          box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+          box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
   color: #4a4a4a;
   display: block;
   padding: 1.25rem;
@@ -17951,8 +17951,17 @@ aside {
   padding-bottom: 0.5em;
 }
 
-.table-is-center td,
-.table-is-center th {
-  text-align: center;
+.img-circle {
+  border-radius: 50%;
+}
+
+.border-whitesmoke {
+  border: 5px solid;
+  border-color: whitesmoke;
+}
+
+.has-shadow {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
 }
 
