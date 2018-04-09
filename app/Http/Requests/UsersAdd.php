@@ -46,7 +46,7 @@ class UsersAdd extends FormRequest
         'jobTitle' => 'required|string|max:255',
         'extTel' => 'required|string|max:255',
         'name' => 'required|string|max:255',
-        'email' => 'required|string|email|max:255|unique:users',
+        'email' => 'required|string|email|max:255',
         'password' => 'required|string|min:6|confirmed',
         'PermissionLevel' => 'required|string|max:255',
         'PermissionGroup' => 'required|string|max:255',

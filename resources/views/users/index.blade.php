@@ -21,27 +21,27 @@
             GRUD
           </p>
           <hr/>
-          <table class="table is-narrow is-hoverable is-fullwidth table-is-center">
+          <table class="table is-narrow is-hoverable is-fullwidth">
             <thead>
               <tr>
-                <th>系統序號</th>
-                <th>使用者</th>
-                <th>所屬公司</th>
-                <th>部門</th>
-                <th>職稱</th>
-                <th>分機號碼</th>
-                <th>檢視/編輯</th>
+                <th class="has-text-centered">系統序號</th>
+                <th class="has-text-centered">使用者</th>
+                <th class="has-text-centered">所屬公司</th>
+                <th class="has-text-centered">部門</th>
+                <th class="has-text-centered">職稱</th>
+                <th class="has-text-centered">分機號碼</th>
+                <th class="has-text-centered">檢視/編輯</th>
               </tr>
             </thead>
             <tbody>
               @foreach ($users as $user)
                 <tr>
-                  <th class="is-centered">{{$user->id}}</th>
-                  <td>{{$user->firstName}} {{$user->lastName}} </td>
-                  <td>{{$user->companyName}}</td>
-                  <td>{{$user->department}}</td>
-                  <td>{{$user->jobTitle}}</td>
-                  <td>{{$user->extTel}}</td>
+                  <th class="has-text-centered">{{$user->id}}</th>
+                  <td class="has-text-centered">{{$user->firstName}} {{$user->lastName}} </td>
+                  <td class="has-text-centered">{{$user->companyName}}</td>
+                  <td class="has-text-centered">{{$user->department}}</td>
+                  <td class="has-text-centered">{{$user->jobTitle}}</td>
+                  <td class="has-text-centered">{{$user->extTel}}</td>
                   <td class="has-text-right"><a class="button is-outlined m-r-5" href="{{route('users.show', $user->id)}}">詳細內容</a><a class="button is-light" href="{{route('users.edit', $user->id)}}">修改</a></td>
                 </tr>
               @endforeach
