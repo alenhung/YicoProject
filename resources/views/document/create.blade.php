@@ -40,7 +40,7 @@
                     <div class="field-body">
                       <div class="field">
                         <div class="control">
-                          <input class="input {{ $errors->has('title') ? ' is-danger' : '' }}" type="text" name="title" placeholder="請填入公文主旨">
+                          <input class="input {{ $errors->has('title') ? ' is-danger' : '' }}" type="text" name="title" placeholder="請填入公文主旨" required autofocus>
                         </div>
                         @if ($errors->has('title'))
                             <div class="help-block">
@@ -59,7 +59,7 @@
                     <div class="field-body">
                       <div class="field">
                         <div class="control">
-                          <input class="input {{ $errors->has('description') ? ' is-danger' : '' }}" type="text" name="description" placeholder="請填入公文概要描述">
+                          <input class="input {{ $errors->has('description') ? ' is-danger' : '' }}" type="text" name="description" placeholder="請填入公文概要描述" required autofocus>
                         </div>
                         @if ($errors->has('description'))
                             <div class="help-block">
@@ -83,7 +83,7 @@
                         <b-radio name="from_to" v-model="from_options" native-value="各主管">各主管</b-radio>
                         <b-radio  name="from_to" v-model="from_options" native-value="manual">自行輸入</b-radio>
                         <div class="control">
-                          <input type="text" name="from_to" class="input field {{ $errors->has('from_to') ? ' is-danger' : '' }}" v-if="from_options == 'manual'"  placeholder="請自行輸入受文/來文單位">
+                          <input type="text" name="from_to" class="input field {{ $errors->has('from_to') ? ' is-danger' : '' }}" v-if="from_options == 'manual'"  placeholder="請自行輸入受文/來文單位"  required autofocus>
                         </div>
                       </section>
                       </template>
@@ -139,7 +139,7 @@
                             <section name="processing_level">
                                 <div class="block">
                                     <b-radio name="processing_level"
-                                        native-value="7">
+                                        native-value="7" required>
                                         普件（7天）
                                     </b-radio>
                                     <b-radio name="processing_level"
@@ -210,7 +210,7 @@
                           <template>
                           <b-field>
                               <b-datepicker icon-pack="fa"
-                                  placeholder="請點選日期" name="create_at" class="{{ $errors->has('create_at') ? ' is-danger' : '' }}">
+                                  placeholder="請點選日期" name="create_at" class="{{ $errors->has('create_at') ? ' is-danger' : '' }}"  required autofocus>
                               </b-datepicker>
                           </b-field>
                         </template>
@@ -231,7 +231,7 @@
                     <div class="field-body">
                       <div class="field">
                         <div class="control">
-                          <input class="input" name="create_user" type="text" value="{{ Auth::user()->name }}">
+                          <input class="input" name="create_user" type="text" value="{{ Auth::user()->name }}"  required autofocus>
                         </div>
                       </div>
                       @if ($errors->has('create_user'))
